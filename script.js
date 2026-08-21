@@ -26,6 +26,14 @@ const ivainteres = interes *(iva/100);
 const  total = mon + interes + ivainteres;
 
   
+
+
+const interesdol = interes * dol
+const intereseur =  interes * eur;
+const ivadol= ivainteres * dol;
+const ivaeur=ivainteres * eur;
+const tdolares = total * dol;
+const teur = total * eur;
 }
 
 
