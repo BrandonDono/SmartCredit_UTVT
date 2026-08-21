@@ -27,7 +27,8 @@ const  total = mon + interes + ivainteres;
 
   
 
-
+const mensualidaddol= mensualidad * dol;
+const mensualidadeur= mensualidad * eur;
 const interesdol = interes * dol
 const intereseur =  interes * eur;
 const ivadol= ivainteres * dol;
