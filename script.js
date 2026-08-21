@@ -26,7 +26,8 @@ const ivainteres = interes *(iva/100);
 const  total = mon + interes + ivainteres;
 
   
-
+const dol = cam.rates.USD;
+const eur = cam.rates.EUR;
 const mensualidaddol= mensualidad * dol;
 const mensualidadeur= mensualidad * eur;
 const interesdol = interes * dol
