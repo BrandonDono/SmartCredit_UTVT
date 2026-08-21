@@ -42,6 +42,7 @@ const teur = total * eur;
 
 
 
+
 document.getElementById("resultado").innerHTML=`
 <br><br>
 <table class="table table-hover table-bordered">
@@ -86,4 +87,46 @@ document.getElementById("resultado").innerHTML=`
 
 
 
+
+
+function calcularFinanzas(mon, tas, plaz, iva) {
+
+    const tamensual = (tas / 100) / 12;
+
+    let mensualidad;
+
+    if (tamensual === 0) {
+
+        mensualidad = mon / plaz;
+
+    } else {
+
+        mensualidad =
+            mon *
+            (tamensual * Math.pow(1 + tamensual, plaz)) /
+            (Math.pow(1 + tamensual, plaz) - 1);
+    }
+
+    const interes = mensualidad * plaz - mon;
+
+    const ivainteres = interes * (iva / 100);
+
+    const total = mon + interes + ivainteres;
+
+    return {
+        mensualidad,
+        interes,
+        ivainteres,
+        total
+    };
+
+
+
+}
+
+if (typeof module !== "undefined") {
+    module.exports = {
+        calcularFinanzas
+    };
+}
 
